@@ -21,6 +21,7 @@ deploy:
     source: cloudhary/dpl
     branch: master
   wait_until_deployed: true
+  wait_until_deployed_timeout: 100
   access_key_id: "$AWS_ACCESS_KEY_ID_FOR_DEPLOYMENT"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY_FOR_DEPLOYMENT"
   region: ap-southeast-1
