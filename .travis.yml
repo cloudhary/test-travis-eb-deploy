@@ -15,7 +15,9 @@ script:
 - zip -r $ELASTICBEANSTALK_DEPLOYMENT_ZIP_FILE . -x .gitignore -q
 deploy:
 - provider: elasticbeanstalk
-  edge: true
+  edge: 
+    source: cloudhary/dpl
+    branch: master
   wait_until_deployed: true
   access_key_id: "$AWS_ACCESS_KEY_ID_FOR_DEPLOYMENT"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY_FOR_DEPLOYMENT"
